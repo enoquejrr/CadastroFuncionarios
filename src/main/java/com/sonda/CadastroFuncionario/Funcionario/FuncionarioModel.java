@@ -1,5 +1,4 @@
-package com.sonda.CadastroFuncionario;
-
+package com.sonda.CadastroFuncionario.Funcionario;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,6 +8,7 @@ public class FuncionarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private String email;
     private int idade;
