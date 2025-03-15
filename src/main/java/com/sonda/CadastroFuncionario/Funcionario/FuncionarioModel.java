@@ -19,8 +19,13 @@ public class FuncionarioModel {
     private Long id;
 
     private String nome;
+
+    @Column(unique = true)
     private String email;
+
     private int idade;
+
+    @Column(unique = trueg)
     private int telefone;
 
     @ManyToOne
