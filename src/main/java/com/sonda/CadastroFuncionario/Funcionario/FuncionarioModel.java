@@ -1,5 +1,8 @@
 package com.sonda.CadastroFuncionario.Funcionario;
+import com.sonda.CadastroFuncionario.Atividades.AtividadesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -13,6 +16,13 @@ public class FuncionarioModel {
     private String email;
     private int idade;
     private int telefone;
+
+    @ManyToOne
+    @JoinColumn(name = "atividades_id")
+    private AtividadesModel atividades;
+
+    public FuncionarioModel() {
+    }
 
     public FuncionarioModel(String nome, String email, int idade, int telefone) {
         this.nome = nome;
