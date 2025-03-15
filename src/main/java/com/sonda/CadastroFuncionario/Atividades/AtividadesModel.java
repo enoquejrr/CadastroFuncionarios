@@ -2,11 +2,17 @@ package com.sonda.CadastroFuncionario.Atividades;
 
 import com.sonda.CadastroFuncionario.Funcionario.FuncionarioModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_atividades")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class AtividadesModel {
 
     @Id
