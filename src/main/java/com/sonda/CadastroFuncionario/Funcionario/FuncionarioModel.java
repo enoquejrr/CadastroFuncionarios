@@ -25,7 +25,7 @@ public class FuncionarioModel {
 
     private int idade;
 
-    @Column(unique = trueg)
+    @Column(unique = true)
     private int telefone;
 
     @ManyToOne
