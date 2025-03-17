@@ -26,7 +26,7 @@ public class FuncionarioModel {
     private int idade;
 
     @Column(unique = true)
-    private int telefone;
+    private String telefone;
 
     @ManyToOne
     @JoinColumn(name = "atividades_id")
