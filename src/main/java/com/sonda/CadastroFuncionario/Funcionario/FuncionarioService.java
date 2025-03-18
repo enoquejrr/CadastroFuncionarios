@@ -1,4 +1,5 @@
 package com.sonda.CadastroFuncionario.Funcionario;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,16 +14,20 @@ public class FuncionarioService {
         this.funcionarioRepository = funcionarioRepository;
     }
 
-    public List<FuncionarioModel> visualizarFuncionario(){
+    public List<FuncionarioModel> visualizarFuncionario() {
         return funcionarioRepository.findAll();
     }
 
-    public FuncionarioModel visualizarFuncionarioPorId(Long id){
+    public FuncionarioModel visualizarFuncionarioPorId(Long id) {
         Optional<FuncionarioModel> funcionarioModelOptinal = funcionarioRepository.findById(id);
         return funcionarioModelOptinal.orElse(null);
     }
 
-    public FuncionarioModel cadastrarFuncionario(FuncionarioModel funcionario){
+    public FuncionarioModel cadastrarFuncionario(FuncionarioModel funcionario) {
         return funcionarioRepository.save(funcionario);
+    }
+
+    public void deletarFuncionario(Long id) {
+        funcionarioRepository.deleteById(id);
     }
 }
