@@ -3,7 +3,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("funcionario")
 public class FuncionarioController {
 
     @GetMapping("/boasvindas")
@@ -22,7 +22,7 @@ public class FuncionarioController {
     }
 
     @GetMapping("/visualizarid")
-    public String visualizarIdFuncionario(){
+    public String visualizarFuncionarioPorId(){
         return "Visualizando funcionarios por id!";
     }
 
