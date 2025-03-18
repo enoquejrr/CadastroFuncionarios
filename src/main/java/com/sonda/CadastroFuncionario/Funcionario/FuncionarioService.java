@@ -21,4 +21,8 @@ public class FuncionarioService {
         Optional<FuncionarioModel> funcionarioModelOptinal = funcionarioRepository.findById(id);
         return funcionarioModelOptinal.orElse(null);
     }
+
+    public FuncionarioModel cadastrarFuncionario(FuncionarioModel funcionario){
+        return funcionarioRepository.save(funcionario);
+    }
 }

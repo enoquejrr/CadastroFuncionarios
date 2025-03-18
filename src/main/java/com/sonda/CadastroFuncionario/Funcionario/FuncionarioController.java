@@ -19,8 +19,8 @@ public class FuncionarioController {
     }
 
     @PostMapping("/cadastrar")
-    public String cadastrarFuncionario(){
-        return "Funcionario cadastrado!";
+    public FuncionarioModel cadastrarFuncionario(@RequestBody FuncionarioModel funcionarioModel){
+        return funcionarioService.cadastrarFuncionario(funcionarioModel);
     }
 
     @GetMapping("/visualizar")
