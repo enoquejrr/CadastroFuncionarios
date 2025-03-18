@@ -1,10 +1,18 @@
 package com.sonda.CadastroFuncionario.Funcionario;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("funcionario")
 public class FuncionarioController {
+
+    private FuncionarioService funcionarioService;
+
+    public FuncionarioController(FuncionarioService funcionarioService) {
+        this.funcionarioService = funcionarioService;
+    }
 
     @GetMapping("/boasvindas")
     public String boasVindas(){
@@ -17,8 +25,8 @@ public class FuncionarioController {
     }
 
     @GetMapping("/visualizar")
-    public String visualizarFuncionario(){
-        return "Visualizando funcionarios!";
+    public List<FuncionarioModel> visualizarFuncionario(){
+        return funcionarioService.visualizarFuncionario();
     }
 
     @GetMapping("/visualizarid")
