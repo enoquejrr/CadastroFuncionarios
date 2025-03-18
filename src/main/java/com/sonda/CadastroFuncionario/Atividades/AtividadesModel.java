@@ -1,5 +1,6 @@
 package com.sonda.CadastroFuncionario.Atividades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sonda.CadastroFuncionario.Funcionario.FuncionarioModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,7 @@ public class AtividadesModel {
     private double salario;
 
     @OneToMany(mappedBy = "atividades")
+    @JsonIgnore
     private List<FuncionarioModel> funcionario;
 
 
