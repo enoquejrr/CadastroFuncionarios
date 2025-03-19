@@ -29,14 +29,14 @@ public class FuncionarioController {
     }
 
     @GetMapping("/visualizarid/{id}")
-    public FuncionarioModel alterarFuncionarioPorId(@PathVariable Long id){
+    public FuncionarioModel visualizarFuncionarioPorId(@PathVariable Long id){
         return funcionarioService.visualizarFuncionarioPorId(id);
     }
 
 
     @PutMapping("/alterarid/{id}")
-    public String alterarFuncionarioPorId(){
-        return "Alterando funcionario por id!";
+    public FuncionarioModel alterarFuncionarioPorId(@PathVariable Long id, @RequestBody FuncionarioModel funcionarioAtualizado){
+        return funcionarioService.alterarFuncionarioPorId(id, funcionarioAtualizado);
     }
 
     @DeleteMapping("/deletar/{id}")

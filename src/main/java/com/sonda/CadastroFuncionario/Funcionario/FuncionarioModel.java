@@ -32,4 +32,6 @@ public class FuncionarioModel {
     @JoinColumn(name = "atividades_id")
     private AtividadesModel atividades;
 
+    public void setId(Long id) {
+    }
 }
